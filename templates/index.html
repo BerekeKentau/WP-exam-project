@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Golden Spoon</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css"> <!-- Animate on Scroll --> 
+</head>
+<body> 
+    <header>
+        <div class="logo" data-aos="zoom-out">
+            <img src="{{ url_for('static', filename='images/logo.png') }}" alt="Restaurant Logo">
+        </div>
+        <div class="name_res" data-aos="zoom-out">
+            <img src="{{ url_for('static', filename='images/name_res.png') }}" alt="name restaurant">
+        </div>
+        <nav>
+            <a href="{{ url_for('home') }}">Home</a>
+            <a href="{{ url_for('menu') }}">Menu</a>
+            <a href="{{ url_for('booking') }}">Booking</a>
+        </nav>
+    </header>
+    <main>
+        <section id="about" data-aos="fade-up">
+            <h2>About Us</h2>
+            <div class="about-container">
+                <p>
+                    Welcome to <strong>Golden Spoon</strong>, where tradition meets innovation. 
+                    We pride ourselves on crafting exquisite dishes using the freshest ingredients, 
+                    combined with a passion for culinary excellence. Whether you're celebrating a special 
+                    occasion or simply enjoying a quiet dinner, we promise to make it unforgettable.
+                </p>
+                <p>
+                    Our menu features a wide selection of gourmet dishes inspired by cuisines from around the world. 
+                    Each dish is prepared with love and care by our world-class chefs. Indulge in luxury, comfort, and
+                    unforgettable flavors.
+                </p>
+            </div>
+        </section>          
+        <section id="kitchen" data-aos="zoom-out">
+            <h2>Our Kitchen in Action</h2>
+            <div class="kitchen-container">
+                <video autoplay muted loop playsinline class="kitchen-video">
+                    <source src="{{ url_for('static', filename='videos/kitchen.mp4') }}" type="video/mp4">
+                    Your browser does not support the video tag.
+                </video>
+            </div>
+        </section>   
+        <section id="celebrity-reviews">
+            <h2>Stars Who Chose Us</h2>
+            <div class="reviews-container">
+                <!-- Звезда 1 -->
+                <div class="review-card">
+                    <img src="static/images/celebrity1.jpg" alt="Celebrity 1" class="celebrity-photo">
+                    <h3>Elizabeth Olsen</h3>
+                    <p class="rating">★★★★★</p>
+                    <p>"The food and ambiance were absolutely delightful. Highly recommend!"</p>
+                </div>
+                <!-- Звезда 2 -->
+                <div class="review-card">
+                    <img src="static/images/celebrity2.jpg" alt="Celebrity 2" class="celebrity-photo">
+                    <h3>Armando Ruggeri</h3>
+                    <p class="rating">★★★★★</p>
+                    <p>"This restaurant was opened by my best student. The dishes are the most delicious in the world!"</p>
+                </div>
+                <!-- Звезда 3 -->
+                <div class="review-card">
+                    <img src="static/images/celebrity3.jpg" alt="Celebrity 3" class="celebrity-photo">
+                    <h3>Taylor Swift</h3>
+                    <p class="rating">★★★★★</p>
+                    <p>"This restaurant exceeded all my expectations. Loved it!"</p>
+                </div>
+                <!-- Звезда 4 -->
+                <div class="review-card">
+                    <img src="static/images/celebrity4.jpg" alt="Celebrity 4" class="celebrity-photo">
+                    <h3>Robert Downey Jr.</h3>
+                    <p class="rating">★★★★★</p>
+                    <p>"Unforgettable dining experience. Hats off to the chefs!"</p>
+                </div>
+            </div>
+        </section>                          
+        <section id="menu-highlight" data-aos="zoom-out">
+            <h2>Dish of the day</h2>
+            <div class="menu-highlight-container">
+                <div class="menu-card">
+                    <img src="{{ url_for('static', filename='images/dish1.jpg') }}" alt="Grilled Salmon" class="menu-image">
+                    <div class="menu-info">
+                        <h3>Grilled Salmon</h3>
+                        <p>Freshly grilled salmon with a touch of lemon butter sauce.</p>
+                        <p class="price">$24.99</p>
+                    </div>
+                </div>
+                <div class="menu-card">
+                    <img src="{{ url_for('static', filename='images/dish2.jpg') }}" alt="Italian Pasta" class="menu-image">
+                    <div class="menu-info">
+                        <h3>Italian Pasta</h3>
+                        <p>Homemade pasta with fresh tomato sauce and Parmesan cheese.</p>
+                        <p class="price">$18.99</p>
+                    </div>
+                </div>
+                <div class="menu-card">
+                    <img src="{{ url_for('static', filename='images/dish3.jpg') }}" alt="Classic Cheesecake" class="menu-image">
+                    <div class="menu-info">
+                        <h3>Classic Cheesecake</h3>
+                        <p>Creamy cheesecake with a graham cracker crust and fresh berry topping.</p>
+                        <p class="price">$8.99</p>
+                    </div>
+                </div>
+            </div>
+        </section>        
+        <section id="hours">
+            <div class="hours-container">
+                <h2>Opening Hours</h2>
+                <p>Monday - Friday: 10:00  - 23:00 </p>
+                <p>Saturday - Sunday: 11:00 - 01:00 </p>
+            </div>
+        </section>      
+        <section id="location" data-aos="zoom-out">
+            <h2>Find Us</h2>
+            <div class="location-container">
+                <img src="{{ url_for('static', filename='images/location.jpg') }}" alt="Restaurant Location" class="location-image" data-aos="zoom-out">
+                <p>Salita Comunale Sperone, 31, 98100 Messina ME</p>
+            </div>
+        </section>                                  
+    </main>
+    <footer>
+        <a href="{{ url_for('admin_menu') }}" class="admin-button">
+            <a href="{{ url_for('login_page') }}" class="admin-button">Admin Panel</a>
+            </a>  
+            <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+        <div class="footer-content">
+            <div class="contact-info">
+                <h4>Contact Us</h4>
+                <p>Email: info@goldenspoon.com</p>
+                <p>Phone: +39 (328) 3472416 </p>
+                <p>Address: Salita Comunale Sperone, 31, 98100 Messina ME</p>
+            </div>
+            <div class="social-media">
+                <h4>Follow Us</h4>
+                <a href="https://instagram.com" target="_blank">
+                    <img src="{{ url_for('static', filename='images/instagram-icon.png') }}" alt="Instagram" class="social-icon">
+                </a>
+                <a href="https://facebook.com" target="_blank">
+                    <img src="{{ url_for('static', filename='images/facebook-icon.png') }}" alt="Facebook" class="social-icon">
+                </a>
+                <a href="https://x.com" target="_blank">
+                    <img src="{{ url_for('static', filename='images/x-icon.png') }}" alt="Twitter" class="social-icon">
+                </a>
+            </div>
+        </div>
+        <p>&copy; 2025 Golden Spoon. All Rights Reserved.</p>
+        <script>
+            AOS.init({
+                duration: 1200, // Длительность анимации (в миллисекундах)
+                once: true      // Анимация будет запускаться только один раз
+            });
+        </script>
+    </footer>  
+</body>
+</html>
