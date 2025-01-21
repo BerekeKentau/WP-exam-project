@@ -1,0 +1,735 @@
+/* Основные стили */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f8f8f8;
+    color: #333;
+    margin: 0; /* Убираем внешние отступы */
+    padding: 0; /* Убираем внутренние отступы */
+    box-sizing: border-box; /* Учитываем границы и отступы */
+    width: 100vw; /* Устанавливаем ширину в 100% окна браузера */
+    overflow-x: hidden; /* Убираем горизонтальную прокрутку */
+}
+
+
+header, main, footer {
+    width: 110%; /* Гарантирует, что элементы занимают всю ширину экрана */
+    margin: 0;
+    padding: 0;
+}
+
+
+/* Хэдер */
+header {
+    display: flex; /* Используем Flexbox */
+    flex-direction: column; /* Располагаем элементы вертикально */
+    align-items: center; /* Выравниваем элементы по центру */
+    justify-content: center; /* Центрируем содержимое */
+    padding: 20px 0; /* Добавляем отступы сверху и снизу */
+    background-color: #bfa76f; /* Фон для хедера */
+    text-align: center; /* Текст выравнивается по центру */
+    margin: 0 auto; /* Убираем возможные смещения */
+    width: 100%; /* Убедитесь, что занимает всю ширину */
+}
+
+
+
+.header-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+header .logo img {
+    display: block; /* Убедитесь, что он является блочным элементом */
+    margin: 0 auto; /* Центрирует логотип */
+    height: 150px; /* Настройте высоту */
+    width: auto; /* Соотношение сторон сохраняется */
+}
+header .name_res img {
+    display: block; /* Убедитесь, что он является блочным элементом */
+    margin: 0 auto; /* Центрирует логотип */
+    height: 150px; /* Настройте высоту */
+    width: auto; /* Соотношение сторон сохраняется */
+}
+
+
+.restaurant-name {
+    font-size: 36px;
+    color: #27200f;
+    font-family: 'Georgia', serif;
+    font-weight: bold;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+    margin: 0 0 15px 0;
+}
+
+header nav {
+    display: flex; /* Используем Flexbox */
+    justify-content: center; /* Центрируем ссылки */
+    gap: 20px; /* Пространство между ссылками */
+    margin-top: 10px; /* Отступ сверху */
+}
+header nav a {
+    text-decoration: none; /* Убираем подчеркивание */
+    color: #27200f; /* Цвет ссылок */
+    font-size: 18px; /* Размер текста */
+    font-weight: bold; /* Жирный текст */
+    transition: color 0.3s ease; /* Плавный переход при наведении */
+}
+header nav a:hover {
+    color: #a14e21; /* Цвет при наведении */
+}
+
+
+main {
+    margin: 0 auto; /* Центрирует содержимое по горизонтали */
+    max-width: 1200px; /* Ограничивает максимальную ширину */
+    padding: 20px; /* Добавляем внутренние отступы */
+    text-align: center; /* Центрируем текст */
+}
+
+
+/* Секция About Us */
+#about {
+    background-color: #f9f9f9;
+    padding: 40px 20px;
+    margin: 20px auto;
+    border: 3px solid #d4af37;
+    border-radius: 10px;
+    max-width: 800px;
+    text-align: center;
+}
+
+#about h2 {
+    font-size: 28px;
+    color: #333;
+    margin-bottom: 20px;
+    font-family: 'Georgia', serif;
+}
+
+.about-container p {
+    font-size: 16px;
+    line-height: 1.6;
+    color: #555;
+    margin-bottom: 20px;
+    font-family: 'Arial', sans-serif;
+}
+
+.about-container strong {
+    color: #d4af37;
+}
+
+/* Секция Our Kitchen in Action */
+#kitchen {
+    background-color: #fff;
+    padding: 20px 10px;
+    margin: 10px auto;
+    text-align: center;
+    max-width: 900px;
+    border: none;
+}
+
+.kitchen-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0;
+}
+
+.kitchen-video {
+    width: 100%;
+    max-width: 800px;
+    height: auto;
+    border: none;
+    margin: 0 auto;
+    display: block;
+    padding: 0;
+}
+/* Секция Звезды */
+#celebrity-reviews {
+    background-color: #f9f9f9;
+    padding: 50px 20px;
+    text-align: center;
+    border-top: 3px solid #d4af37;
+    border-bottom: 3px solid #d4af37;
+    margin-top: 40px;
+}
+
+#celebrity-reviews h2 {
+    font-size: 32px;
+    color: #333;
+    margin-bottom: 30px;
+    font-family: 'Georgia', serif;
+}
+
+.reviews-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+}
+
+.review-card {
+    background-color: #fff;
+    border: 2px solid #d4af37;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    max-width: 250px;
+    padding: 20px;
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.review-card:hover {
+    transform: scale(1.05);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+}
+
+.celebrity-photo {
+    width: 100px;
+    height: 100px;
+    object-fit: cover;
+    border-radius: 50%;
+    margin-bottom: 15px;
+    border: 3px solid #d4af37;
+}
+
+.review-card h3 {
+    font-size: 20px;
+    color: #333;
+    margin-bottom: 10px;
+}
+
+.review-card .rating {
+    font-size: 18px;
+    color: #d4af37;
+    margin-bottom: 10px;
+}
+
+.review-card p {
+    font-size: 14px;
+    color: #555;
+    line-height: 1.5;
+}
+/* Секция Menu Highlight */
+#menu-highlight {
+    background-color: #f9f9f9;
+    padding: 40px 20px;
+    text-align: center;
+}
+
+#menu-highlight h2 {
+    font-size: 28px;
+    color: #333;
+    margin-bottom: 30px;
+    font-family: 'Georgia', serif;
+}
+
+.menu-highlight-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+}
+
+.menu-card {
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    width: 300px;
+    text-align: left;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.menu-card:hover {
+    transform: scale(1.05);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+}
+
+.menu-image {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+}
+
+.menu-info {
+    padding: 15px;
+}
+
+.menu-info h3 {
+    font-size: 20px;
+    color: #333;
+    margin-bottom: 10px;
+}
+
+.menu-info p {
+    font-size: 14px;
+    color: #555;
+    margin-bottom: 10px;
+}
+
+.menu-info .price {
+    font-size: 16px;
+    font-weight: bold;
+    color: #d4af37;
+}
+.category-navigation {
+    text-align: center;
+    margin: 20px 0;
+    padding: 10px 0;
+    background-color: #d4af37;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+}
+
+.category-navigation button {
+    background-color: #00008B;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    margin: 5px;
+    font-size: 16px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.category-navigation button:hover {
+    background-color: #5a5900;
+}
+
+.category-navigation button:focus {
+    outline: none;
+    box-shadow: 0 0 5px rgba(191, 167, 111, 0.5);
+}
+
+
+/* Стили для галереи */
+.gallery {
+    display: flex;
+    gap: 10px;
+    justify-content: center;
+}
+
+.gallery img {
+    width: 200px;
+    height: 150px;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+}
+
+.gallery img:hover {
+    transform: scale(1.1);
+}
+.hours-container {
+    position: relative;
+    padding: 20px;
+    margin: 20px auto;
+    max-width: 400px;
+    background-color: #fff; /* Цвет фона внутри рамки */
+    text-align: center;
+    border-radius: 15px; /* Закругленные углы */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Тень */
+    z-index: 1;
+}
+
+.hours-container::before {
+    content: '';
+    position: absolute;
+    top: -10px;
+    left: -10px;
+    right: -10px;
+    bottom: -10px;
+    border: 5px dashed #d4af37; /* Фигурная рамка */
+    border-radius: 25px; /* Более закругленные углы */
+    z-index: -1; /* Расположение за текстом */
+}
+
+.hours-container h2 {
+    font-family: 'Georgia', serif;
+    color: #bfa76f;
+    font-size: 24px;
+    margin-bottom: 15px;
+}
+
+.hours-container p {
+    font-size: 16px;
+    color: #555;
+    margin: 5px 0;
+}
+
+
+/* Секция меню */
+.menu-section {
+    margin-bottom: 40px;
+    padding: 20px;
+    background-color: #f9f9f9;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.menu-section h3 {
+    font-size: 24px;
+    color: #bfa76f;
+    margin-bottom: 20px;
+    font-family: 'Georgia', serif;
+    text-align: center;
+}
+
+.menu-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+}
+
+.menu-item {
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    width: 300px;
+    overflow: hidden;
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.menu-item:hover {
+    transform: scale(1.05);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+}
+
+.menu-image {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+}
+
+.menu-details {
+    padding: 15px;
+}
+
+.menu-details h4 {
+    font-size: 18px;
+    color: #333;
+    margin-bottom: 10px;
+}
+
+.menu-details p {
+    font-size: 14px;
+    color: #555;
+    margin-bottom: 5px;
+}
+
+.menu-details .price {
+    font-size: 16px;
+    font-weight: bold;
+    color: #d4af37;
+}
+
+/* Стили для формы бронирования */
+form {
+    max-width: 400px;
+    margin: 0 auto;
+    padding: 20px;
+    background: rgb(206, 178, 35);
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: column; /* Элементы располагаются вертикально */
+    gap: 2px; /* Расстояние между элементами */
+}
+
+form label {
+    font-weight: bold;
+    color: #333;
+    margin-bottom: 5px;
+    text-align: left; /* Описание поля выравнивается влево */
+}
+
+form input, form button, form select {
+    width: 100%; /* Поля занимают всю ширину формы */
+    padding: 10px;
+    margin: 0; /* Убираем лишние отступы */
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    font-size: 16px;
+    text-align: center; /* Центрирование текста */
+    box-sizing: border-box; /* Учитываем границы и отступы */
+}
+
+form input::placeholder {
+    text-align: center; /* Центрирование текста в placeholder */
+    color: #999; /* Цвет текста placeholder */
+}
+
+form button {
+    background-color: #000000;
+    color: white;
+    font-weight: bold;
+    border: none;
+    cursor: pointer;
+    padding: 12px;
+    font-size: 16px;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+form button:hover {
+    background-color: #b8902a;
+}
+
+form input:focus, form select:focus {
+    outline: none; /* Убираем стандартное выделение */
+    border-color: #bfa76f; /* Цвет выделенной границы */
+    box-shadow: 0 0 5px rgba(191, 167, 111, 0.5); /* Тень вокруг */
+}
+
+
+
+/* Таблицы для админских страниц */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 20px 0;
+    font-size: 18px;
+    text-align: left;
+}
+
+table th, table td {
+    border: 1px solid #ddd;
+    padding: 8px;
+}
+
+table th {
+    background-color: #bfa76f;
+    color: white;
+}
+
+table tr:nth-child(even) {
+    background-color: #f2f2f2;
+}
+
+footer {
+    background-color: #333;
+    color: white;
+    text-align: center; /* Центрируем текст */
+    padding: 20px 0;
+    font-size: 14px;
+    position: relative;
+    bottom: 0;
+    width: 100%;
+}
+
+footer .footer-container {
+    max-width: 1200px; /* Ширина для центрирования */
+    margin: 0 auto; /* Центрируем содержимое */
+    display: flex;
+    flex-wrap: wrap; /* Для адаптивности */
+    justify-content: center; /* Центрируем содержимое по горизонтали */
+    align-items: center; /* Центрируем содержимое по вертикали */
+    gap: 20px; /* Расстояние между элементами */
+}
+
+footer .footer-section {
+    flex: 1 1 300px; /* Адаптивность для секций */
+    text-align: center; /* Центрируем текст внутри каждой секции */
+}
+
+footer .footer-section a {
+    color: white;
+    text-decoration: none;
+    margin: 0 10px;
+    transition: color 0.3s ease;
+}
+
+footer .footer-section a:hover {
+    color: #d4af37; /* Цвет при наведении */
+}
+
+.social-media a {
+    display: inline-block;
+    margin: 0 10px;
+}
+
+.social-icon {
+    width: 24px;
+    height: 24px;
+    transition: transform 0.3s ease;
+}
+
+.social-icon:hover {
+    transform: scale(1.2);
+}
+
+
+
+/* Секция категорий (радио-кнопки) */
+.categories {
+    margin: 10px 0;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+    padding-left: 0; /* Убираем лишний отступ */
+    justify-content: flex-start; /* Выравниваем влево */
+}
+
+.categories label {
+    font-size: 14px;
+    color: #333;
+    display: flex;
+    align-items: center;
+    gap: 5px; /* Добавляем промежуток между кнопкой и текстом */
+}
+
+.categories input[type="radio"] {
+    margin: 0; /* Убираем лишние отступы */
+}
+
+button[type="submit"] {
+    margin-top: 20px; /* Добавляем отступ перед кнопкой */
+    align-self: center; /* Выравниваем кнопку по центру */
+}
+
+
+/* Стили для кнопки удаления */
+.delete-button {
+    background-color: #ff4d4d;
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.delete-button:hover {
+    background-color: #cc0000;
+}
+.menu-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+    text-align: left;
+    font-size: 16px;
+}
+
+.menu-table th,
+.menu-table td {
+    border: 1px solid #ddd;
+    padding: 10px;
+}
+
+.menu-table th {
+    background-color: #f4f4f4;
+    font-weight: bold;
+}
+
+.menu-table tr:nth-child(even) {
+    background-color: #f9f9f9;
+}
+
+.menu-table tr:hover {
+    background-color: #f1f1f1;
+}
+
+.delete-button {
+    background-color: #f44336;
+    color: white;
+    border: none;
+    padding: 5px 10px;
+    cursor: pointer;
+    border-radius: 4px;
+}
+
+.delete-button:hover {
+    background-color: #d32f2f;
+}
+.arrow {
+    margin: 25px 0;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+    padding-left: 0; /* Убираем лишний отступ */
+    justify-content: flex-end; /* Выравниваем влево */
+}
+/* Login Page Styles */
+.login-container {
+    background-color: #fff;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    text-align: center;
+    max-width: 400px;
+    width: 100%;
+}
+
+.login-container h1 {
+    margin-bottom: 20px;
+    font-size: 24px;
+    color: #333;
+    font-weight: bold;
+}
+
+.login-form {
+    display: flex;
+    flex-direction: column;
+}
+
+.login-form label {
+    margin-bottom: 5px;
+    font-size: 14px;
+    font-weight: bold;
+    color: #555;
+}
+
+.login-form input {
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    font-size: 14px;
+}
+
+.login-form input:focus {
+    outline: none;
+    border-color: #bfa76f;
+    box-shadow: 0 0 5px rgba(191, 167, 111, 0.5);
+}
+
+.login-button {
+    padding: 10px;
+    background-color: #d4af37;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.login-button:hover {
+    background-color: #b8902a;
+}
+
+.login-container {
+    animation: fadeIn 1s ease-in-out;
+}
+
+/* что бы добавить эффект */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: scale(0.9);
+    }
+    to {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+
